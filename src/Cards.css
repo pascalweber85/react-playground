@@ -1,0 +1,35 @@
+.Cards {
+  display: grid;
+  justify-items: center;
+  max-width: 200px;
+  background: steelblue;
+  border: black solid 1px;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 5px 10px 3px grey;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  position: relative;
+  width: 300px;
+  height: auto;
+}
+
+.Cards__bookmark {
+  position: absolute;
+  top: -15px;
+  right: 10px;
+  border: 20px solid lightgray;
+  border-bottom-color: transparent;
+  height: 20px;
+  width: 0;
+}
+
+.Cards__bookmark--selected {
+  position: absolute;
+  top: -15px;
+  right: 10px;
+  border: 20px solid rgb(178, 37, 197);
+  border-bottom-color: transparent;
+  height: 20px;
+  width: 0;
+}
