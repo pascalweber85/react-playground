@@ -1,6 +1,7 @@
 import * as React from 'react'
 import Cards from './Cards'
 import './App.css'
+import Header from './Header'
 
 const cards = [
   {
@@ -24,8 +25,7 @@ const cards = [
 export default () => {
   return (
     <div className="App">
-      {/* <Cards title="Frage" text="Du oder ich ?" />
-      <Cards title="Frage" text="Meins oder Deins?" isBookmarked /> */}
+      <Header />
 
       {cards.map(({ id, question, textq, answer, texta, isBookmarked }) => (
         <Cards

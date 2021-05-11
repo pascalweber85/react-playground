@@ -1,10 +1,10 @@
 import * as React from 'react'
 import './Header.css'
 
-export default function Header({ text }) {
+export default function Header() {
   return (
     <section className="Header">
-      <H1>{text}</H1>
+      <h1>Home</h1>
     </section>
   )
 }
