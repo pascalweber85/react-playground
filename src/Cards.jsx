@@ -1,14 +1,18 @@
 import * as React from 'react'
 import './Cards.css'
 
-export default function Cards({ isActive }) {
+export default function Cards({ isBookmarked, title, text }) {
   return (
     <section className="Cards">
-      <h2>Frage</h2>
-      <p>Du oder Ich?</p>
+      <h2>{title}</h2>
+      <p>{text}</p>
       <div
         role="button"
-        className={isActive ? 'Cards__bookmark--selected' : 'Cards__bookmark'}
+        className={
+          isBookmarked
+            ? 'Cards__bookmark--selected Cards__bookmark'
+            : 'Cards__bookmark'
+        }
         aria-label="Add bookmarks"
       ></div>
     </section>
