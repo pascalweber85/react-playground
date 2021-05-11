@@ -1,0 +1,6 @@
+.Header {
+  display: grid;
+  justify-content: center;
+  background-color: lightblue;
+  color: white;
+}
