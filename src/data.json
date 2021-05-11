@@ -1,0 +1,101 @@
+{
+  "response_code": 0,
+  "results": [
+    {
+      "category": "Entertainment: Video Games",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "What year was the game Team Fortress 2 released?",
+      "correct_answer": "2007",
+      "incorrect_answers": ["2009", "2005", "2010"]
+    },
+    {
+      "category": "Entertainment: Board Games",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "How many pieces are there on the board at the start of a game of chess?",
+      "correct_answer": "32",
+      "incorrect_answers": ["16", "20", "36"]
+    },
+    {
+      "category": "Sports",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "Which Formula One driver was nicknamed &#039;The Professor&#039;?",
+      "correct_answer": "Alain Prost",
+      "incorrect_answers": ["Ayrton Senna", "Niki Lauda", "Emerson Fittipaldi"]
+    },
+    {
+      "category": "Entertainment: Video Games",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "What is the original name of Final Fantasy XV?",
+      "correct_answer": "Final Fantasy Versus XIII",
+      "incorrect_answers": [
+        "Final Fantasy: Reborn",
+        "Final Fantasy XVI",
+        "Final Fantasy XIII-3"
+      ]
+    },
+    {
+      "category": "Entertainment: Books",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "In the &quot;Harry Potter&quot; novels, what must a Hogwarts student do to enter the Ravenclaw Common Room?",
+      "correct_answer": "Answer a riddle",
+      "incorrect_answers": [
+        "Rhythmically tap barrels with a wand",
+        "Speak a password",
+        "Knock in sequence"
+      ]
+    },
+    {
+      "category": "Entertainment: Music",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "Which of these songs is NOT in The Beatles&#039; album &quot;Sgt. Pepper&#039;s Lonely Hearts Club Band&quot;?",
+      "correct_answer": "Strawberry Fields Forever",
+      "incorrect_answers": [
+        "Getting Better",
+        "Fixing a Hole",
+        "Lucy in the Sky with Diamonds"
+      ]
+    },
+    {
+      "category": "Geography",
+      "type": "boolean",
+      "difficulty": "medium",
+      "question": "The title of the 1969 film &quot;Krakatoa, East_of Java&quot; is incorrect, as Krakatoa is in fact west of Java.",
+      "correct_answer": "True",
+      "incorrect_answers": ["False"]
+    },
+    {
+      "category": "Celebrities",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "Which TV chef wrote an autobiography titled &quot;Humble Pie&quot;?",
+      "correct_answer": "Gordon Ramsay",
+      "incorrect_answers": [
+        "Jamie Oliver",
+        "Ainsley Harriott",
+        "Antony Worrall Thompson"
+      ]
+    },
+    {
+      "category": "Entertainment: Music",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "How many studio albums have the heavy metal band, &#039;Metallica&#039; released in the period between 1983 and 2016?",
+      "correct_answer": "10",
+      "incorrect_answers": ["7", "9", "12"]
+    },
+    {
+      "category": "Sports",
+      "type": "multiple",
+      "difficulty": "hard",
+      "question": "Which of these Russian cities did NOT contain a stadium that was used in the 2018 FIFA World Cup?",
+      "correct_answer": "Vladivostok",
+      "incorrect_answers": ["Rostov-on-Don", "Yekaterinburg", "Kaliningrad"]
+    }
+  ]
+}
