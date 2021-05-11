@@ -6,18 +6,22 @@ import Header from './Header'
 const cards = [
   {
     question: 'Frage',
-    textq: 'Du oder ich?',
+    textQuestion: 'Du oder ich?',
     answer: 'Antwort',
-    texta: 'Ich!',
+    textAnswer: 'Ich!',
     isBookmarked: false,
+    isVisible: true,
+    tags: ['Technik', 'Sport', 'Bio', 'Erotik'],
     id: 1,
   },
   {
     question: 'Frage',
-    textq: 'Meins oder deins?',
+    textQuestion: 'Meins oder deins?',
     answer: 'Antwort',
-    texta: 'Deins!',
+    textAnswer: 'Deins!',
     isBookmarked: true,
+    isVisible: false,
+    tags: ['Serien', 'Spiele', 'Wissen'],
     id: 2,
   },
 ]
@@ -27,16 +31,29 @@ export default () => {
     <div className="App">
       <Header />
 
-      {cards.map(({ id, question, textq, answer, texta, isBookmarked }) => (
-        <Cards
-          key={id}
-          question={question}
-          answer={answer}
-          textq={textq}
-          texta={texta}
-          isBookmarked={isBookmarked}
-        />
-      ))}
+      {cards.map(
+        ({
+          id,
+          question,
+          textQuestion,
+          answer,
+          textAnswer,
+          isBookmarked,
+          isVisible,
+          tags,
+        }) => (
+          <Cards
+            key={id}
+            question={question}
+            answer={answer}
+            textQuestion={textQuestion}
+            textAnswer={textAnswer}
+            isBookmarked={isBookmarked}
+            isVisible={isVisible}
+            tags={tags}
+          />
+        )
+      )}
     </div>
   )
 }

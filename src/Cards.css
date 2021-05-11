@@ -29,6 +29,20 @@
   border-bottom-color: transparent;
 }
 
+.Tags {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+}
+
+.Tags > li {
+  background: blueviolet;
+  border-radius: 5px;
+  padding: 5px;
+}
+
 .hidden {
   display: none;
 }

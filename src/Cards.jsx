@@ -2,18 +2,20 @@ import * as React from 'react'
 import './Cards.css'
 
 export default function Cards({
+  isVisible,
   isBookmarked,
   question,
-  textq,
+  textQuestion,
   answer,
-  texta,
+  textAnswer,
+  tags,
 }) {
   return (
     <section className="Cards">
       <h2>{question}</h2>
-      <p>{textq}</p>
+      <p>{textQuestion}</p>
       <h2>{answer}</h2>
-      <p>{texta}</p>
+      <p className={isVisible ? 'textAnswer' : 'hidden'}>{textAnswer}</p>
       <div
         role="button"
         className={
@@ -23,11 +25,13 @@ export default function Cards({
         }
         aria-label="Add bookmarks"
       ></div>
-      <div className="Tags">
-        <button>tag1</button>
-        <button>tag2</button>
-        <button>tag3</button>
-        <button>tag4</button>
+      <div>
+        <ul className="Tags">
+          {/* alles was ich mappe, braucht einen "key" */}
+          {tags.map(tag => (
+            <li key={tag}>{tag}</li>
+          ))}
+        </ul>
       </div>
     </section>
   )
