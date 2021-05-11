@@ -2,6 +2,7 @@ import * as React from 'react'
 import Cards from './Cards'
 import './App.css'
 import Header from './Header'
+import Navigation from './Nav'
 
 const cards = [
   {
@@ -30,6 +31,7 @@ export default () => {
   return (
     <div className="App">
       <Header />
+      <Navigation />
 
       {cards.map(
         ({
