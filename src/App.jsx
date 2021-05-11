@@ -1,14 +1,21 @@
 import * as React from 'react'
-
-import Pagination from './Pagination'
 import Cards from './Cards'
+import './App.css'
+
+const cards = [
+  { title: 'Frage', text: 'Du oder ich?', isBookmarked: false, id: 1 },
+  { title: 'Frage', text: 'Meins oder deins?', isBookmarked: true, id: 2 },
+]
 
 export default () => {
   return (
-    <div>
-      <Cards title="Frage" text="Du oder ich ?" />
-      <Cards title="Frage" text="Meins oder Deins?" isBookmarked />
-      <Pagination isLeftDisabled text="1/34" />
+    <div className="App">
+      {/* <Cards title="Frage" text="Du oder ich ?" />
+      <Cards title="Frage" text="Meins oder Deins?" isBookmarked /> */}
+
+      {cards.map(({ id, title, text, isBookmarked }) => (
+        <Cards key={id} title={title} text={text} isBookmarked={isBookmarked} />
+      ))}
     </div>
   )
 }
