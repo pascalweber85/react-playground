@@ -2,3 +2,9 @@
   margin: 0;
   display: grid;
 }
+
+.Box {
+  background: hotpink;
+  width: 100px;
+  height: 100px;
+}
