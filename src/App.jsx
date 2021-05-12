@@ -16,7 +16,7 @@ export default () => {
       </form>
       <ul>
         {todos.map(({ text, isDone, id }) => (
-          <li key={id}>
+          <li onClick={() => toggleISDone(id)} key={id}>
             {text} {isDone && '✅'}
           </li>
         ))}
@@ -24,13 +24,24 @@ export default () => {
     </div>
   )
 
+  function toggleISDone(id) {
+    const index = todos.findIndex(todo => todo.id === id)
+    const todo = todos[index]
+
+    setTodos([
+      ...todos.slice(0, index),
+      { ...todo, isDone: !todo.isDone },
+      ...todos.slice(index + 1),
+    ])
+  }
+
   function handleSubmit(event) {
     event.preventDefault()
     const form = event.target
     const input = form.elements.todo
-    // spread operator `...todos`
     const newTodo = { text: input.value, isDone: false, id: uuidv4() }
-    setTodos([newTodo, ...todos])
+
+    setTodos([...todos, newTodo]) // spread operator `...todos`
     form.reset()
     input.focus()
   }
