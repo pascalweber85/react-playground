@@ -1,61 +1,37 @@
 import * as React from 'react'
-import Cards from './Cards'
 import './App.css'
-import Header from './Header'
-import Navigation from './Nav'
-
-const cards = [
-  {
-    question: 'Frage',
-    textQuestion: 'Du oder ich?',
-    answer: 'Antwort',
-    textAnswer: 'Ich!',
-    isBookmarked: false,
-    isVisible: true,
-    tags: ['Technik', 'Sport', 'Bio', 'Erotik'],
-    id: 1,
-  },
-  {
-    question: 'Frage',
-    textQuestion: 'Meins oder deins?',
-    answer: 'Antwort',
-    textAnswer: 'Deins!',
-    isBookmarked: true,
-    isVisible: false,
-    tags: ['Serien', 'Spiele', 'Wissen'],
-    id: 2,
-  },
-]
+import { useState } from 'react'
+import { v4 as uuidv4 } from 'uuid'
 
 export default () => {
+  const [todos, setTodos] = useState([])
   return (
     <div className="App">
-      <Header />
-      <Navigation />
-
-      {cards.map(
-        ({
-          id,
-          question,
-          textQuestion,
-          answer,
-          textAnswer,
-          isBookmarked,
-          isVisible,
-          tags,
-        }) => (
-          <Cards
-            key={id}
-            question={question}
-            answer={answer}
-            textQuestion={textQuestion}
-            textAnswer={textAnswer}
-            isBookmarked={isBookmarked}
-            isVisible={isVisible}
-            tags={tags}
-          />
-        )
-      )}
+      <form onSubmit={handleSubmit}>
+        <label>
+          Add todo:
+          <input name="todo" type="text" />
+        </label>
+        <button>Add</button>
+      </form>
+      <ul>
+        {todos.map(({ text, isDone, id }) => (
+          <li key={id}>
+            {text} {isDone && '✅'}
+          </li>
+        ))}
+      </ul>
     </div>
   )
+
+  function handleSubmit(event) {
+    event.preventDefault()
+    const form = event.target
+    const input = form.elements.todo
+    // spread operator `...todos`
+    const newTodo = { text: input.value, isDone: false, id: uuidv4() }
+    setTodos([newTodo, ...todos])
+    form.reset()
+    input.focus()
+  }
 }
